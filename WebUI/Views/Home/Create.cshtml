@@ -1,0 +1,40 @@
+﻿@model Entities.Student
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+<h2>Create</h2>
+<h4>Student</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create" asp-controller="Home" method="Post">
+            <input asp-for="Id" type="hidden" />
+            <div class="form-group">
+                <label asp-for="Name"></label>
+                <input asp-for="Name" class="form-control" />
+            </div> 
+            
+            <div class="form-group">
+                <label asp-for="Surname"></label>
+                <input asp-for="Surname" type="text" class="form-control" />
+                </div>  
+            <div class="form-group">
+                <label asp-for="Age"></label>
+                <input asp-for="Age" type="text" class="form-control" />
+            </div>   
+            <div class="form-group">
+                <label asp-for="SchoolNumber"></label>
+                <input asp-for="SchoolNumber" type="text" class="form-control" />
+            </div>
+           <input type="submit" value="Create" class="btn btn-primary" />
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
